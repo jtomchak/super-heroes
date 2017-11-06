@@ -18,3 +18,7 @@ We want to map over the array of heroes and return an array of react elements.
         <ul>{heroesList}</ul>
       </div>
 ```
+6. Let's make this look nice. grab the App.css so we can add some nice hover style. 
+7. We can't use class, bc it's a key word. So we need to use className in order to apply css class's to our JSX markup.
+8. Update your superheroes.js, so it has unique id to go with it. 
+9. 
