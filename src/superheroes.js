@@ -1,6 +1,7 @@
 export default {
   HEROES: [
     {
+      id: 312,
       superhero: "Batman",
       publisher: "DC Comics",
       alter_ego: "Bruce Wayne",
@@ -8,6 +9,7 @@ export default {
       characters: "Bruce Wayne"
     },
     {
+      id: 345,
       superhero: "Superman",
       publisher: "DC Comics",
       alter_ego: "Kal-El",
@@ -15,6 +17,7 @@ export default {
       characters: "Kal-El"
     },
     {
+      id: 908,
       superhero: "Flash",
       publisher: "DC Comics",
       alter_ego: "Jay Garrick",
@@ -22,6 +25,7 @@ export default {
       characters: "Jay Garrick, Barry Allen, Wally West, Bart Allen"
     },
     {
+      id: 98870,
       superhero: "Green Lantern",
       publisher: "DC Comics",
       alter_ego: "Alan Scott",
@@ -30,6 +34,7 @@ export default {
         "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
     },
     {
+      id: 93458,
       superhero: "Green Arrow",
       publisher: "DC Comics",
       alter_ego: "Oliver Queen",
@@ -37,6 +42,7 @@ export default {
       characters: "Oliver Queen"
     },
     {
+      id: 9454,
       superhero: "Wonder Woman",
       publisher: "DC Comics",
       alter_ego: "Princess Diana",
@@ -44,6 +50,7 @@ export default {
       characters: "Princess Diana"
     },
     {
+      id: 23424,
       superhero: "Martian Manhunter",
       publisher: "DC Comics",
       alter_ego: "J'onn J'onzz",
@@ -51,6 +58,7 @@ export default {
       characters: "Martian Manhunter"
     },
     {
+      id: 12332,
       superhero: "Robin/Nightwing",
       publisher: "DC Comics",
       alter_ego: "Dick Grayson",
@@ -58,6 +66,7 @@ export default {
       characters: "Dick Grayson"
     },
     {
+      id: 84573,
       superhero: "Blue Beetle",
       publisher: "DC Comics",
       alter_ego: "Dan Garret",
@@ -65,6 +74,7 @@ export default {
       characters: "Dan Garret, Ted Kord, Jaime Reyes"
     },
     {
+      id: 83475,
       superhero: "Black Canary",
       publisher: "DC Comics",
       alter_ego: "Dinah Drake",
@@ -72,6 +82,7 @@ export default {
       characters: "Dinah Drake, Dinah Lance"
     },
     {
+      id: 8324393,
       superhero: "Spider Man",
       publisher: "Marvel Comics",
       alter_ego: "Peter Parker",
@@ -79,6 +90,7 @@ export default {
       characters: "Peter Parker"
     },
     {
+      id: 9324053,
       superhero: "Captain America",
       publisher: "Marvel Comics",
       alter_ego: "Steve Rogers",
@@ -86,6 +98,7 @@ export default {
       characters: "Steve Rogers"
     },
     {
+      id: 93248325,
       superhero: "Iron Man",
       publisher: "Marvel Comics",
       alter_ego: "Tony Stark",
@@ -93,6 +106,7 @@ export default {
       characters: "Tony Stark"
     },
     {
+      id: 234578,
       superhero: "Thor",
       publisher: "Marvel Comics",
       alter_ego: "Thor Odinson",
@@ -100,6 +114,7 @@ export default {
       characters: "Thor Odinson"
     },
     {
+      id: 232345,
       superhero: "Hulk",
       publisher: "Marvel Comics",
       alter_ego: "Bruce Banner",
@@ -107,6 +122,7 @@ export default {
       characters: "Bruce Banner"
     },
     {
+      id: 923845,
       superhero: "Wolverine",
       publisher: "Marvel Comics",
       alter_ego: "James Howlett",
@@ -114,6 +130,7 @@ export default {
       characters: "James Howlett"
     },
     {
+      id: 234854323245,
       superhero: "Daredevil",
       publisher: "Marvel Comics",
       alter_ego: "Matthew Michael Murdock",
@@ -121,6 +138,7 @@ export default {
       characters: "Matthew Michael Murdock"
     },
     {
+      id: 432853945,
       superhero: "Hawkeye",
       publisher: "Marvel Comics",
       alter_ego: "Clinton Francis Barton",
@@ -128,6 +146,7 @@ export default {
       characters: "Clinton Francis Barton"
     },
     {
+      id: 204394958,
       superhero: "Cyclops",
       publisher: "Marvel Comics",
       alter_ego: "Scott Summers",
@@ -135,6 +154,7 @@ export default {
       characters: "Scott Summers"
     },
     {
+      id: 9348593485,
       superhero: "Silver Surfer",
       publisher: "Marvel Comics",
       alter_ego: "Norrin Radd",
