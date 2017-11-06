@@ -12,15 +12,15 @@ class App extends Component {
     const heroesList = this.state.heroes.map(function(hero, index) {
       return (
         <li>
-          <span>{index}:</span> {hero.superhero}
+          <span className="badge">{hero.id}:</span> {hero.superhero}
         </li>
       );
     });
     console.log(heroesList);
     return (
-      <div>
+      <div className="App">
         <h1>{this.state.title}</h1>
-        <ul>{heroesList}</ul>
+        <ul className="heroes">{heroesList}</ul>
       </div>
     );
   }
