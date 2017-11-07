@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Button } from "react-bootstrap";
 import SuperHeroes from "./superheroes";
 
 class App extends Component {
@@ -9,10 +10,25 @@ class App extends Component {
     selectedHero: {}
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log("CLICK SUBMIT");
+  };
+
   handleSelectedHero = hero => {
     // this.state.selectedHero = hero;
     this.setState({
       selectedHero: hero
+    });
+  };
+
+  handleNameChange = event => {
+    console.log(event.target.value);
+    this.setState({
+      selectedHero: {
+        ...this.state.selectedHero,
+        superhero: event.target.value
+      }
     });
   };
 
@@ -27,16 +43,42 @@ class App extends Component {
     return (
       <div className="App">
         <h1>{this.state.title}</h1>
-        <ul className="heroes">{heroesList}</ul>
-        <div>
-          <label>ID: </label>
-          {this.state.selectedHero.id}
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 col-sm-12">
+              <ul className="heroes">{heroesList}</ul>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <h2 style={{ textAlign: "center" }}>
+                {this.state.selectedHero.superhero}
+              </h2>
+              <form
+                className="form-horizontal"
+                style={{ width: "60%", padding: "25px" }}
+                onSubmit={this.handleSubmit}
+              >
+                <div className="form-group">
+                  <label className="control-label">ID: </label>
+                  {this.state.selectedHero.id}
+                </div>
+                <div className="form-group">
+                  <label className="control-label">Hero Name: </label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    value={this.state.selectedHero.superhero}
+                    onChange={event => this.handleNameChange(event)}
+                  />
+                </div>
+                <input
+                  className="button btn btn-info"
+                  type="submit"
+                  value="submit"
+                />
+              </form>
+            </div>
+          </div>
         </div>
-        <form>
-          <label>Hero Name:</label>
-          <input type="text" value={this.state.selectedHero.superhero} />
-          <input className="button" type="submit" value="submit" />
-        </form>
       </div>
     );
   }
