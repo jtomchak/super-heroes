@@ -1,17 +1,30 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
 import SuperHeroes from "./superheroes";
+
+import { getHeroes } from "./superheroes.service";
 
 class App extends Component {
   state = {
     title: "Super Heroes",
-    heroes: SuperHeroes.HEROES,
+    heroes: [],
     selectedHero: {
       id: undefined,
       superhero: ""
     }
   };
+
+  //life kyle hooks. do stuff on initialize
+  componentWillMount() {
+    getHeroes()
+      .then(res => res.json())
+      .then(payload => {
+        this.setState({
+          heroes: payload.heroes
+        });
+      })
+      .catch(err => console.log(err));
+  }
 
   //update our super in the array, in place
   handleSubmit = event => {
