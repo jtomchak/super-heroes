@@ -58,7 +58,6 @@ class HeroesList extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.title}</h1>
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-12">

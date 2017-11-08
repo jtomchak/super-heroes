@@ -2,8 +2,12 @@ import React, { Component } from "react";
 
 class HeroForm extends Component {
   state = {
-    hero: this.props.hero
+    heroId: parseInt(this.props.match.params.heroId),
+    hero: undefined
   };
+
+  //on load when component is init
+  componentWillMount() {}
 
   handleNameChange = event => {
     this.setState({
@@ -15,6 +19,9 @@ class HeroForm extends Component {
   };
   render() {
     const hero = this.state.hero;
+    if (!hero) {
+      return <div>NOPE</div>;
+    }
     return (
       <div className="col-md-6 col-sm-12">
         <h2 style={{ textAlign: "center" }}>{hero.superhero}</h2>

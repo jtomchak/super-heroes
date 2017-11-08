@@ -5,4 +5,6 @@ const getHeroes = () => {
   return fetch(heroURL);
 };
 
+const getHeroById = id => {};
+
 export { getHeroes };
