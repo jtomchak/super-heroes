@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HeroesListItem from "./HeroesListItem";
+import HeroForm from "./HeroForm";
 import "./HeroesList.css";
 
 import { getHeroes } from "../superheroes.service";
@@ -27,9 +28,9 @@ class HeroesList extends Component {
   }
 
   //update our super in the array, in place
-  handleSubmit = event => {
+  handleSubmit = (event, hero) => {
     event.preventDefault();
-    const hero = this.state.selectedHero;
+    // const hero = this.state.selectedHero;
     const heroIndex = this.state.heroes.map(o => o.id).indexOf(hero.id);
     this.setState({
       selectedHero: {
@@ -54,15 +55,6 @@ class HeroesList extends Component {
     });
   };
 
-  handleNameChange = event => {
-    this.setState({
-      selectedHero: {
-        ...this.state.selectedHero,
-        superhero: event.target.value
-      }
-    });
-  };
-
   render() {
     return (
       <div className="App">
@@ -78,35 +70,10 @@ class HeroesList extends Component {
               </ul>
             </div>
             {this.state.selectedHero.id && (
-              <div className="col-md-6 col-sm-12">
-                <h2 style={{ textAlign: "center" }}>
-                  {this.state.selectedHero.superhero}
-                </h2>
-                <form
-                  className="form-horizontal"
-                  style={{ width: "60%", padding: "25px" }}
-                  onSubmit={this.handleSubmit}
-                >
-                  <div className="form-group">
-                    <label className="control-label">ID: </label>
-                    {this.state.selectedHero.id}
-                  </div>
-                  <div className="form-group">
-                    <label className="control-label">Hero Name: </label>
-                    <input
-                      className="form-control"
-                      type="text"
-                      value={this.state.selectedHero.superhero}
-                      onChange={event => this.handleNameChange(event)}
-                    />
-                  </div>
-                  <input
-                    className="button btn btn-info"
-                    type="submit"
-                    value="submit"
-                  />
-                </form>
-              </div>
+              <HeroForm
+                hero={this.state.selectedHero}
+                onSubmit={this.handleSubmit}
+              />
             )}
           </div>
         </div>
