@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import HeroesListItem from "./HeroesListItem";
 import "./HeroesList.css";
 
 import { getHeroes } from "../superheroes.service";
@@ -63,20 +64,18 @@ class HeroesList extends Component {
   };
 
   render() {
-    const heroesList = this.state.heroes.map(hero => {
-      return (
-        <li key={hero.id} onClick={() => this.handleSelectedHero(hero)}>
-          <span className="badge">{hero.id}:</span> {hero.superhero}
-        </li>
-      );
-    });
     return (
       <div className="App">
         <h1>{this.state.title}</h1>
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-12">
-              <ul className="heroes">{heroesList}</ul>
+              <ul className="heroes">
+                <HeroesListItem
+                  heroes={this.state.heroes}
+                  onSelectedHero={this.handleSelectedHero}
+                />
+              </ul>
             </div>
             {this.state.selectedHero.id && (
               <div className="col-md-6 col-sm-12">
