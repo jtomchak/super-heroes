@@ -66,7 +66,7 @@
       "characters": "Dick Grayson"
     },
     {
-      "id": "2345988",
+      "id": "33",
       "superhero": "Blue Beetle",
       "publisher": "DC Comics",
       "alter_ego": "Dan Garret",
@@ -74,7 +74,7 @@
       "characters": "Dan Garret, Ted Kord, Jaime Reyes"
     },
     {
-      "id": "234345977",
+      "id": "1",
       "superhero": "Black Canary",
       "publisher": "DC Comics",
       "alter_ego": "Dinah Drake",
@@ -90,7 +90,7 @@
       "characters": "Peter Parker"
     },
     {
-      "id": "2343459",
+      "id": "44",
       "superhero": "Captain America",
       "publisher": "Marvel Comics",
       "alter_ego": "Steve Rogers",
@@ -138,7 +138,7 @@
       "characters": "Matthew Michael Murdock"
     },
     {
-      "id": "2345988",
+      "id": "2",
       "superhero": "Hawkeye",
       "publisher": "Marvel Comics",
       "alter_ego": "Clinton Francis Barton",
