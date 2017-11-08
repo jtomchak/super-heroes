@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import "./App.css";
-import SuperHeroes from "./superheroes";
+import "./HeroesList.css";
 
-import { getHeroes } from "./superheroes.service";
+import { getHeroes } from "../superheroes.service";
 
-class App extends Component {
+class HeroesList extends Component {
   state = {
     title: "Super Heroes",
     heroes: [],
@@ -117,4 +116,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default HeroesList;
