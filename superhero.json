@@ -1,7 +1,7 @@
 {
   "heroes": [
     {
-      "id": "1",
+      "id": "01",
       "superhero": "Batman",
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
@@ -9,7 +9,7 @@
       "characters": "Bruce Wayne"
     },
     {
-      "id": "2",
+      "id": "02",
       "superhero": "Superman",
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
@@ -17,7 +17,7 @@
       "characters": "Kal-El"
     },
     {
-      "id": "3",
+      "id": "03",
       "superhero": "Flash",
       "publisher": "DC Comics",
       "alter_ego": "Jay Garrick",
@@ -25,7 +25,7 @@
       "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
     },
     {
-      "id": "4",
+      "id": "04",
       "superhero": "Green Lantern",
       "publisher": "DC Comics",
       "alter_ego": "Alan Scott",
@@ -34,7 +34,7 @@
         "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
     },
     {
-      "id": "5",
+      "id": "05",
       "superhero": "Green Arrow",
       "publisher": "DC Comics",
       "alter_ego": "Oliver Queen",
@@ -42,7 +42,7 @@
       "characters": "Oliver Queen"
     },
     {
-      "id": "6",
+      "id": "06",
       "superhero": "Wonder Woman",
       "publisher": "DC Comics",
       "alter_ego": "Princess Diana",
@@ -50,7 +50,7 @@
       "characters": "Princess Diana"
     },
     {
-      "id": "7",
+      "id": "07",
       "superhero": "Martian Manhunter",
       "publisher": "DC Comics",
       "alter_ego": "J'onn J'onzz",
@@ -58,7 +58,7 @@
       "characters": "Martian Manhunter"
     },
     {
-      "id": "8",
+      "id": "08",
       "superhero": "Robin/Nightwing",
       "publisher": "DC Comics",
       "alter_ego": "Dick Grayson",
@@ -66,7 +66,7 @@
       "characters": "Dick Grayson"
     },
     {
-      "id": "9",
+      "id": "09",
       "superhero": "Blue Beetle",
       "publisher": "DC Comics",
       "alter_ego": "Dan Garret",
