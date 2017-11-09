@@ -13,27 +13,6 @@ class HeroesList extends Component {
     }
   };
 
-  //update our super in the array, in place
-  handleSubmit = (event, hero) => {
-    event.preventDefault();
-    // const hero = this.state.selectedHero;
-    const heroIndex = this.state.heroes.map(o => o.id).indexOf(hero.id);
-    this.setState({
-      selectedHero: {
-        id: undefined,
-        superhero: ""
-      },
-      heroes: [
-        ...this.state.heroes.slice(0, heroIndex),
-        {
-          ...hero,
-          superhero: hero.superhero
-        },
-        ...this.state.heroes.slice(heroIndex + 1, this.state.heroes.length)
-      ]
-    });
-  };
-
   handleSelectedHero = hero => {
     // this.state.selectedHero = hero;
     this.setState({

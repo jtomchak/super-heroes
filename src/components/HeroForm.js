@@ -10,8 +10,16 @@ class HeroForm extends Component {
   componentWillMount() {
     //we've got the hero id -> is the hero object{}
     const hero = this.props.getHeroById(this.props.match.params.heroId);
-    console.log(hero);
+    this.setState({
+      hero: hero
+    });
   }
+
+  handleSubmitHeroForm = (e, hero) => {
+    e.preventDefault();
+    this.props.handleSubmit(e, hero);
+    this.props.history.goBack();
+  };
 
   handleNameChange = event => {
     this.setState({
@@ -36,7 +44,7 @@ class HeroForm extends Component {
         <form
           className="form-horizontal"
           style={{ width: "60%", padding: "25px" }}
-          onSubmit={e => this.props.onSubmit(e, hero)}
+          onSubmit={e => this.handleSubmitHeroForm(e, hero)}
         >
           <div className="form-group">
             <label className="control-label">ID: </label>
@@ -48,7 +56,7 @@ class HeroForm extends Component {
               className="form-control"
               type="text"
               value={hero.superhero}
-              onChange={event => this.handleNameChange(event)}
+              onChange={event => this.handleNameChange(event, hero)}
             />
           </div>
           <input className="button btn btn-info" type="submit" value="submit" />
