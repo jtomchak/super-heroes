@@ -20,6 +20,26 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  //update our super in the array, in place
+  handleSubmit = (event, hero) => {
+    // const hero = this.state.selectedHero;
+    const heroIndex = this.state.heroes.map(o => o.id).indexOf(hero.id);
+    this.setState({
+      selectedHero: {
+        id: undefined,
+        superhero: ""
+      },
+      heroes: [
+        ...this.state.heroes.slice(0, heroIndex),
+        {
+          ...hero,
+          superhero: hero.superhero
+        },
+        ...this.state.heroes.slice(heroIndex + 1, this.state.heroes.length)
+      ]
+    });
+  };
+
   getHeroById = id => {
     const hero = this.state.heroes.find(hero => hero.id === id);
     return hero;
@@ -46,7 +66,11 @@ class App extends Component {
             exact
             path={"/heroes/details/:heroId"}
             render={props => (
-              <HeroForm {...props} getHeroById={this.getHeroById} />
+              <HeroForm
+                {...props}
+                handleSubmit={this.handleSubmit}
+                getHeroById={this.getHeroById}
+              />
             )}
           />
         </div>
