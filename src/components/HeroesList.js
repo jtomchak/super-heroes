@@ -1,31 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import HeroesListItem from "./HeroesListItem";
 import HeroForm from "./HeroForm";
 import "./HeroesList.css";
 
-import { getHeroes } from "../superheroes.service";
-
 class HeroesList extends Component {
   state = {
     title: "Super Heroes",
-    heroes: [],
     selectedHero: {
       id: undefined,
       superhero: ""
     }
   };
-
-  //life kyle hooks. do stuff on initialize
-  componentWillMount() {
-    getHeroes()
-      .then(res => res.json())
-      .then(payload => {
-        this.setState({
-          heroes: payload.heroes
-        });
-      })
-      .catch(err => console.log(err));
-  }
 
   //update our super in the array, in place
   handleSubmit = (event, hero) => {
@@ -63,16 +49,20 @@ class HeroesList extends Component {
             <div className="col-md-6 col-sm-12">
               <ul className="heroes">
                 <HeroesListItem
-                  heroes={this.state.heroes}
+                  heroes={this.props.heroes}
                   onSelectedHero={this.handleSelectedHero}
                 />
               </ul>
             </div>
             {this.state.selectedHero.id && (
-              <HeroForm
-                hero={this.state.selectedHero}
-                onSubmit={this.handleSubmit}
-              />
+              <div className="col-md-6 col-sm-12">
+                <h2 style={{ textAlign: "center" }}>
+                  {this.state.selectedHero.superhero}
+                </h2>
+                <Link to={`/heroes/details/${this.state.selectedHero.id}`}>
+                  <button className="btn btn-info">Details</button>
+                </Link>
+              </div>
             )}
           </div>
         </div>

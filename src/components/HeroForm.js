@@ -7,7 +7,11 @@ class HeroForm extends Component {
   };
 
   //on load when component is init
-  componentWillMount() {}
+  componentWillMount() {
+    //we've got the hero id -> is the hero object{}
+    const hero = this.props.getHeroById(this.props.match.params.heroId);
+    console.log(hero);
+  }
 
   handleNameChange = event => {
     this.setState({
@@ -20,7 +24,11 @@ class HeroForm extends Component {
   render() {
     const hero = this.state.hero;
     if (!hero) {
-      return <div>NOPE</div>;
+      return (
+        <div>
+          <h1>{this.state.heroId}</h1>
+        </div>
+      );
     }
     return (
       <div className="col-md-6 col-sm-12">
