@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+
 import HeroesList from "./HeroesList";
 import HeroForm from "./HeroForm";
 import Dashboard from "./Dashboard";
@@ -89,4 +91,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  heroes: state.heroes
+});
+
+export default connect(mapStateToProps)(App);
