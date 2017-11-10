@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import HeroesList from "./HeroesList";
 import HeroForm from "./HeroForm";
+import Dashboard from "./Dashboard";
+import "./App.css";
 import { getHeroes } from "../superheroes.service";
 
 class App extends Component {
@@ -51,12 +53,20 @@ class App extends Component {
         <div>
           <h1>Super Hero Town</h1>
           <nav>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
             <NavLink exact to="/heroes">
               Heroes
             </NavLink>
           </nav>
           <hr />
 
+          <Route
+            exact
+            path="/"
+            render={props => <Dashboard heroes={this.state.heroes} />}
+          />
           <Route
             exact
             path="/heroes"
