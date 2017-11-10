@@ -1,0 +1,5 @@
+const ADD_HERO = "ADD_HERO";
+const ADD_HEROES = "ADD_HEROES";
+const EDIT_HERO = "SAVE_HERO";
+
+export { ADD_HERO, EDIT_HERO, ADD_HEROES };
